@@ -5,6 +5,11 @@ namespace :javascript do
       system "#{RbConfig.ruby} ./bin/rails app:template LOCATION=#{File.expand_path("../../install/bun/install.rb",  __dir__)}"
     end
 
+    desc "Install Deno"
+    task :deno do
+      system "#{RbConfig.ruby} ./bin/rails app:template LOCATION=#{File.expand_path("../../install/deno/install.rb",  __dir__)}"
+    end
+
     desc "Install esbuild"
     task :esbuild do
       system "#{RbConfig.ruby} ./bin/rails app:template LOCATION=#{File.expand_path("../../install/esbuild/install.rb",  __dir__)}"
